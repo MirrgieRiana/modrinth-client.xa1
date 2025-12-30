@@ -1,6 +1,6 @@
 # modrinth-client.xa1
 
-modrinth-client.xa1: Modrinth client implemented in Xarpite
+modrinth-client.xa1: Modrinth client implemented in [Xarpite](https://github.com/MirrgieRiana/xarpite)
 
 ## Example
 
