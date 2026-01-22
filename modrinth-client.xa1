@@ -1,8 +1,7 @@
-url   := s    -> s >> UTF8 | _::toArray()() | "%$%02x(_)" >> TO_STRING
 fetch := api  -> EXEC("curl", "-s", "https://api.modrinth.com/v2/$api").$*
 sha1  := file -> EXEC("sha1sum", file)[0 ~ 40]
 {
   getProject: query -> fetch("project/$query")
-  search    : query -> fetch("search?query=$(query >> url)")
+  search    : query -> fetch("search?query=$(query >> URL)")
   fileSearch: file  -> fetch("version_file/$(file >> sha1)?algorithm=sha1")
 }
