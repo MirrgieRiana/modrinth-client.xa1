@@ -3,6 +3,7 @@ sha1  := file -> EXEC("sha1sum", file)[0 ~ 40]
 {
   getProject        : id    -> fetch("project/$id")
   getProjectVersions: id    -> fetch("project/$id/version")
+  getVersion        : id    -> fetch("version/$id")
   search            : query -> (p := {__() >> DROP[1]}; fetch("search?query=$(query >> URL)$(p.limit?::LET ( _ => "&limit=$_" ) ?: "")"))
   fileSearch        : file  -> fetch("version_file/$(file >> sha1)?algorithm=sha1")
 }
