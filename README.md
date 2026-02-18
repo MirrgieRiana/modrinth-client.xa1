@@ -5,16 +5,16 @@ modrinth-client.xa1: Modrinth client implemented in [Xarpite](https://github.com
 ## Example
 
 ```shell
-$ ./xarpite/xa --jvm '@USE("./modrinth-client"); search("Farmer$(APOS)s Delight").hits.0.description'
+$ ./.xarpite/xarpite/xa '@USE("io.github.mirrgieriana:modrinth-client:0.0.1-SNAPSHOT"); search("Farmer$(APOS)s Delight").hits.0.description'
 A cozy expansion to farming and cooking!
 
-$ ./xarpite/xa --jvm '@USE("./modrinth-client"); getProject("R2OftAxM").title'
+$ ./.xarpite/xarpite/xa '@USE("io.github.mirrgieriana:modrinth-client:0.0.1-SNAPSHOT"); getProject("R2OftAxM").title'
 Farmer's Delight
 
-$ ./xarpite/xa --jvm '@USE("./modrinth-client"); getProject(fileSearch("FarmersDelight-1.21.1-1.2.9.jar").project_id).title'
+$ ./.xarpite/xarpite/xa '@USE("io.github.mirrgieriana:modrinth-client:0.0.1-SNAPSHOT"); getProject(fileSearch("FarmersDelight-1.21.1-1.2.9.jar").project_id).title'
 Farmer's Delight
 
-$ ./xarpite/xa --jvm '@USE("./modrinth-client"); search("Create Addon").hits().title'
+$ ./.xarpite/xarpite/xa '@USE("io.github.mirrgieriana:modrinth-client:0.0.1-SNAPSHOT"); search("Create Addon").hits().title'
 Create: Addon Compatibility
 Create: Addon frenzy
 Create ADDONS
